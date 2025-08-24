@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoeHub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #222;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  user-select: none;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide nav links by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Show links when hamburger checked */
+  #menu-toggle:checked + .hamburger + nav ul {
+    display: flex;
+  }
+}
+
+  </style>
+
+  
+</head>
+<body>
+
+  <!-- ✅ Navbar at the top -->
+<header>
+  <div class="logo" >ShoeStore</div>
+
+  <!-- Hamburger Menu (Checkbox Hack) -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <!-- Navbar Links -->
+  <nav>
+    <ul>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ✅ Hero Section -->
+  <section id="home" class="hero">
+    <h1 style="font-size: 100px;">Step Into Style</h1>
+    <p>Find your perfect pair today.</p>
+  </section>
+
+  <!-- ✅ Shop Section -->
+<main id="shop" class="products">
+  <h2 style="text-decoration: underline;">Our Shoes</h2>
+  <div class="grid">
+
+    <!-- 1 -->
+<div class="shoe-card">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sporty Sneaker">
+  <h3>Sporty Sneaker</h3>
+  <p>$79.99</p>
+  <p class="description">Lightweight sneakers perfect for running and casual wear.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 2 -->
+<div class="shoe-card">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.wAq_h5sPGWYaQK5IkcnL2QHaEO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Classic White">
+  <h3>Classic White</h3>
+  <p>$89.99</p>
+  <p class="description">Clean white sneakers that match every outfit.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 3 -->
+<div class="shoe-card">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.lMe8IvYPoe9nYOh_4SWDegHaFS?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Running Shoes">
+  <h3>Running Shoes</h3>
+  <p>$99.99</p>
+  <p class="description">High-performance running shoes built for comfort and speed.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 4 -->
+<div class="shoe-card">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.-S7KewPVHDMRoAF2ARLBawHaIX?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Red Sneakers">
+  <h3>Red Sneakers</h3>
+  <p>$74.99</p>
+  <p class="description">Bold red sneakers to make a statement wherever you go.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 5 -->
+<div class="shoe-card">
+  <img src="https://www.80scasualclassics.co.uk/images/adidas-swift-run-trainers-triple-black-p11768-69854_image.jpg" alt="Black Trainers">
+  <h3>Black Trainers</h3>
+  <p>$84.99</p>
+  <p class="description">Sleek black trainers ideal for gym and streetwear.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 6 -->
+<div class="shoe-card">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.kZtViayFxou7iUJmMffcTAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Street Style">
+  <h3>Street Style</h3>
+  <p>$69.99</p>
+  <p class="description">Trendy shoes for urban and casual street fashion.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 7 -->
+<div class="shoe-card">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.aOisH9qtLX-rlEv9rHqDcQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Converse Classic">
+  <h3>Converse Classic</h3>
+  <p>$80</p>
+  <p class="description">Iconic Converse shoes that never go out of style.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 8 -->
+<div class="shoe-card">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.m4APUdfdrZxkxg0ReChE2wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Vans Old Skool">
+  <h3>Vans Old Skool</h3>
+  <p>$75</p>
+  <p class="description">Classic Vans with a timeless skateboarding style.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 9 -->
+<div class="shoe-card">
+  <img src="https://cdn.flightclub.com/TEMPLATE/274477/1.jpg" alt="Jordan Retro 4">
+  <h3>Jordan Retro 4</h3>
+  <p>$200</p>
+  <p class="description">Legendary basketball sneakers with retro design.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 10 -->
+<div class="shoe-card">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.FnmCt1aVG2HdPCNShdSLwQHaJh?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Reebok Classic">
+  <h3>Reebok Classic</h3>
+  <p>$90</p>
+  <p class="description">Retro Reebok shoes perfect for casual everyday wear.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 11 -->
+<div class="shoe-card">
+  <img src="https://tse3.mm.bing.net/th/id/OIP.HLhOBCQSGSk1YR5U68bgFAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Asics Gel Nimbus">
+  <h3>Asics Gel Nimbus</h3>
+  <p>$130</p>
+  <p class="description">High-quality running shoes with maximum cushioning.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 12 -->
+<div class="shoe-card">
+  <img src="https://th.bing.com/th/id/R.aa9260ca595128d870c9d6e1366a938b?rik=973atXhR7w7Y3A&pid=ImgRaw&r=0" alt="New Balance 574">
+  <h3>New Balance 574</h3>
+  <p>$110</p>
+  <p class="description">Comfortable and versatile sneakers for daily use.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 13 -->
+<div class="shoe-card">
+  <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Fila Disruptor">
+  <h3>Fila Disruptor</h3>
+  <p>$85</p>
+  <p class="description">Chunky sneakers with a bold retro look.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 14 -->
+<div class="shoe-card">
+  <img src="https://tse3.mm.bing.net/th/id/OIP.diGy73XqHuJ0yQ4iDWKUDwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Under Armour HOVR">
+  <h3>Under Armour HOVR</h3>
+  <p>$125</p>
+  <p class="description">Lightweight running shoes with responsive cushioning.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 15 -->
+<div class="shoe-card">
+  <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?w=400" alt="Balenciaga Triple S">
+  <h3>Balenciaga Triple S</h3>
+  <p>$900</p>
+  <p class="description">Luxury sneakers with a unique layered sole design.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 16 -->
+<div class="shoe-card">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.66z5lQ0ndWkML7CllsjvXAHaIb?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gucci Ace Sneakers">
+  <h3>Gucci Ace Sneakers</h3>
+  <p>$750</p>
+  <p class="description">Elegant designer sneakers with premium leather finish.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+<!-- 17 -->
+<div class="shoe-card">
+  <img src="https://th.bing.com/th/id/R.8b747ca3cfc44eb627fe3b9a46c3f73f?rik=JcaRyrrP72gW1w&pid=ImgRaw&r=0" alt="Salomon Trail">
+  <h3>Salomon Trail</h3>
+  <p>$150</p>
+  <p class="description">Durable trail shoes for hiking and outdoor adventures.</p>
+  <a href="#contact" class="order-btn">Order Now</a>
+</div>
+
+   
+</main>
+
+
+  <!-- ✅ About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At ShoeHub, we believe in combining comfort and style. Our mission is to provide high-quality footwear that makes every step count.</p>
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@shoehub.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Location: Nairobi, Kenya</p>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 ShoeHub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
